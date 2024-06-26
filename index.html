@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Dynadocs</title>
+</head>
+
+<body>
+    <div class="h-screen pb-14 bg-right bg-cover" style="background-image:url('./static/bg.svg');">
+        <div class="w-full container mx-auto p-5">
+            <!-- Navbar -->
+            <nav class="flex" aria-label="Breadcrumb">
+                <div class="flex items-center">
+                    <img src="./static/logo.png" alt="Logo" class="h-12 w-auto">
+                </div>
+                <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                    <li class="inline-flex items-center">
+                        <a href="home.html"
+                            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-purple-600 dark:text-gray-400 dark:hover:text-white">
+                            <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                            </svg>
+                            Accueil
+                        </a>
+                    </li>
+                </ol>
+
+            </nav>
+        </div>
+
+        <div class="flex justify-center -translate-y-8">
+            <form class="max-w-screen-lg mx-auto flex justify-between" method="post" id="form">
+                <!-- partie gauche -->
+                <div class="w-1/2 px-5">
+                    <div class="mb-5">
+                        <label for="prenom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Prénom
+                            Rapporteur:</label>
+                        <input
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            type="text" name="PrenomRapp" />
+                    </div class="mb-5">
+                    <div class="mb-5">
+                        <label for="nom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom
+                            Rapporteur:</label>
+                        <input
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            type="text" name="NomRapp" />
+                    </div class="mb-5">
+                    <div class="mb-5">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="commentaire">Commentaire Rapporteur:</label>
+                        <textarea
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            name="CommentaireRapp" placeholder="tapez votre commentaire..." cols="30"
+                            rows="10"></textarea>
+                    </div class="mb-5">
+                    <div class="mb-5">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="nomCandidat">Nom du
+                            Candidat:</label>
+                        <input
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            type="text" name="NomCandidat" />
+                    </div class="mb-5">
+                    <div class="mb-5">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="PrenomCandidat">Prénom
+                            du Candidat:</label>
+                        <input
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            type="text" name="PrenomCandidat" />
+                    </div class="mb-5">
+
+                </div>
+
+                <!-- partie droite -->
+                <div class="w-1/2 px-5 ">
+                    <div class="mb-5">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="description">Expérience
+                            Professionnelle:</label>
+                        <textarea
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            name="ExperiencePro" placeholder="tapez votre commentaire..." cols="30"
+                            rows="10"></textarea>
+                    </div class="mb-5">
+                    <div class="mb-5">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="descriptionSco">Parcours Scolaire:</label>
+                        <textarea
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            name="ParcoursScolaire" placeholder="tapez votre commentaire..." cols="30"
+                            rows="10"></textarea>
+                    </div class="mb-5">
+                    <div class="mb-5">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="note">Note de
+                            la
+                            candidature:</label>
+                        <select
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            name="Note">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div class="mb-5">
+
+                    <!-- milieu en bas-->
+                    <div class="flex flex-col items-center mt-auto ml-auto mr-auto transform -translate-x-40">
+                        <div class="mb-5">
+                                <label for="dropzone-file"
+                                    class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                                    id="dropzone">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                                        </svg>
+                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
+                                                class="font-semibold">Upload
+                                                un fichier
+                                            </span> ou glisser ou déposer</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">JSON, TXT, XML or CSV
+                                        </p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" class="hidden"
+                                        onchange="HandleFileChange(event)" />
+                                </label>
+
+                            <script>
+                                const dropzone = document.getElementById('dropzone');
+
+                                dropzone.addEventListener('dragover', (event) => {
+                                    event.preventDefault();
+                                    dropzone.classList.add('bg-gray-200');
+                                });
+
+                                dropzone.addEventListener('dragleave', (event) => {
+                                    dropzone.classList.remove('bg-gray-200');
+                                });
+
+                                dropzone.addEventListener('drop', (event) => {
+                                    event.preventDefault();
+                                    dropzone.classList.remove('bg-gray-200');
+
+                                    const files = event.dataTransfer.files;
+                                    if (files.length > 0) {
+                                        HandleFileChange({ target: { files: files } });
+                                    }
+                                });
+                            </script>
+                        </div class="mb-5">
+
+                        <fieldset>
+                            <legend class="sr-only">File types</legend>
+                            <div class="flex items-center mb-4">
+                                <input type="radio" name="fileType" value="json" id="jsonRadio"
+                                    class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-purple-300 dark:focus:ring-purple-600 dark:focus:bg-purple-600 dark:bg-gray-700 dark:border-gray-600" />
+                                <label for="jsonRadio"
+                                    class="block ms-2  text-sm font-medium text-gray-900 dark:text-gray-300">JSON
+                                    file</label>
+                                <input type="radio" name="fileType" value="txt" id="txtRadio"
+                                    class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-purple-300 dark:focus:ring-purple-600 dark:focus:bg-purple-600 dark:bg-gray-700 dark:border-gray-600" />
+                                <label for="txtRadio"
+                                    class="block ms-2  text-sm font-medium text-gray-900 dark:text-gray-300">TXT
+                                    file</label>
+                                <input type="radio" name="fileType" value="xml" id="xmlRadio"
+                                    class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-purple-300 dark:focus:ring-purple-600 dark:focus:bg-purple-600 dark:bg-gray-700 dark:border-gray-600" />
+                                <label for="xmlRadio"
+                                    class="block ms-2  text-sm font-medium text-gray-900 dark:text-gray-300">XML
+                                    file</label>
+                                <input type="radio" name="fileType" value="csv" id="csvRadio"
+                                    class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-purple-300 dark:focus:ring-purple-600 dark:focus:bg-purple-600 dark:bg-gray-700 dark:border-gray-600" />
+                                <label for="csvRadio"
+                                    class="block ms-2  text-sm font-medium text-gray-900 dark:text-gray-300">CSV
+                                    file</label>
+                        </fieldset>
+                        <div class="relative -translate-y-2"> <button
+                                class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
+                                type="button" onclick="HandleEnregistrerClick(event)">enregistrer</button>
+                        </div>
+
+                    </div class="flex items-center mb-4">
+                </div>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./HandleFileChange.js" type="module"></script>
+    <script src="./Parsers.js" type="module"></script>
+    <script src="./HandleEnregistrerClick.js" type="module"></script>
+    <script src="./Converters.js" type="module"></script>
+
+    <!-- Toast -->
+    <div id="toast-success"
+        class=" fixed top-5 left-5 p-4 mb-4 text-sm hidden text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+        role="alert">
+        <span class="font-medium">Rapport enregistré !</span>
+    </div>
+    <div id="toast-success-upload"
+        class="fixed top-5 right-5 p-4 mb-4 text-sm hidden text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+        role="alert">
+        <span class="font-medium">Rapport importé avec succès !</span>
+    </div>
+</body>
+
+</html>
