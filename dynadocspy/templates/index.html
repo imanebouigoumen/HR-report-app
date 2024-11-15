@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div id="title">Professional Report Summary</div>
+    <div id="div1">
+        {% for elem in dic.items() %}
+            <details> 
+                <summary id="summ">
+                    <div id="summ1">{{ elem[0] }}</div>
+                    <div id="summoy">Moyenne : {{ elem[1][-1] }}</div>
+                </summary>
+                {% for i in elem[1][:-1] %}
+                    <details id="inner">
+                        <summary>Rapporteur : {{ i["NomRapp"] }} {{ i["PrenomRapp"] }}</summary>
+                        <article>
+                            <pre><code>Experience : {{ i["ExperiencePro"] }} <br> Note : {{ i["Note"] }} <br> Commentaire : {{ i["CommentaireRapp"] }}</code></pre>
+                        </article>
+                    </details>
+                {% endfor %}
+            </details>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

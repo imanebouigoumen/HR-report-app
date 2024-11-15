@@ -1,0 +1,11 @@
+{
+  "PrenomRapp": "miguel",
+  "NomRapp": "Sebastien",
+  "CommentaireRapp": "test test test\nteeeeeest",
+  "NomCandidat": "nedroma",
+  "PrenomCandidat": "faycel",
+  "ExperiencePro": "développeur python chez zomah",
+  "ParcoursScolaire": "master 2 imis",
+  "Note": "10",
+  "fileType": "json"
+}
